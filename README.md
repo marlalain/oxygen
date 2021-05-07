@@ -1,9 +1,9 @@
 # Oxygen
-GNU/Linux-compatible userspace written in Rust.
+GNU/Linux-compatible userspace written in C.
 
 ---
 
-## Instalation
+## Installation (Not Usable)
 
 Do as follows:
 ```
