@@ -1,0 +1,3 @@
+[rust]
+  command = 'make'
+  isBackground = true
