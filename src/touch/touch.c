@@ -1,3 +1,11 @@
+// touch made by @paulo-e, @pauloe
+// paulo-e.gitlab.io
+
+// TODO add --version
+// TODO add --help
+// TODO add (change only access time)
+// TODO add (parse STRING and use it instead of current time)
+
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
