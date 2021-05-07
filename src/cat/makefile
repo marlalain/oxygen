@@ -1,6 +1,6 @@
 C = gcc
-IN = cat.c
-OUT = cat
+IN = touch.c
+OUT = touch
 
 all:
 	$(C) $(IN) -o $(OUT)

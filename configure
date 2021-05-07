@@ -1,4 +1,0 @@
-#!/bin/sh
-
-export DESTDIR=$(pwd)/build
-mkdir DESTDIR
