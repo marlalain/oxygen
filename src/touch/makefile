@@ -4,6 +4,3 @@ OUT = touch
 
 all:
 	$(C) $(IN) -o $(OUT)
-
-run:
-	./$(OUT)

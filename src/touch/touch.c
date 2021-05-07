@@ -20,6 +20,10 @@ int main(int argc, char *argv[]) {
     // if the command has enough arguments, loop through all of them
     for (int i = 1; i < argc; i++) {
       filePointer = fopen(argv[i], "w");
+      if (filePointer == NULL) {
+        printf("Unable to create file.\n");
+        return 1;
+      }
       fclose(filePointer);
     }
     return 0;
