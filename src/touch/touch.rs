@@ -2,7 +2,7 @@ use std::fs::File;
 use std::env;
 
 fn main() {
-    let mut arguments: Vec<String> = std::env::args().collect();
+    let mut arguments: Vec<String> = env::args().collect();
     arguments.remove(0);
 
     for argument in &arguments {

@@ -1,11 +1,12 @@
-use std::fs;
+use std::{env, fs, io};
 
-fn main() {
-    let mut arguments: Vec<String> = std::env::args().collect();
+fn main() -> io::Result<()> {
+    let mut arguments: Vec<String> = env::args().collect();
     arguments.remove(0);
 
     for argument in &arguments {
         fs::create_dir(argument).expect("Unable to create folder.");
     }
 
+    Ok(())
 }

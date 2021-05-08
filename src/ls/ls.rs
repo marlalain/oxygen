@@ -1,8 +1,7 @@
-use std::fs;
-use std::io;
+use std::{fs, io, env};
 
 fn main() -> io::Result<()> {
-    let mut arguments: Vec<String> = std::env::args().collect();
+    let mut arguments: Vec<String> = env::args().collect();
     arguments.remove(0);
 
     for entry in fs::read_dir(".")? {

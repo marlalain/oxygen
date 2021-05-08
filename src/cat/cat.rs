@@ -1,12 +1,13 @@
-use std::env;
-use std::fs;
+use std::{env, fs, io};
 
-fn main() {
-    let mut arguments: Vec<String> = std::env::args().collect();
+fn main() -> io::Result<()> {
+    let mut arguments: Vec<String> = env::args().collect();
     arguments.remove(0);
 
     for argument in &arguments {
-        let content = fs::read_to_string(argument).unwrap();
+        let content = fs::read_to_string(argument)?;
         println!("{}", content);
     }
+
+    Ok(())
 }
