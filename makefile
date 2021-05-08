@@ -6,7 +6,7 @@
 # @oxygen
 # @version git
 
-C = gcc					# compiler being used
+C = rustc				# compiler being used
 DESTDIR = build			# destination folder for built applications
 
 all:
