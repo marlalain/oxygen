@@ -1,5 +1,6 @@
 # Oxygen
 GNU/Linux-compatible userspace written in Rust.
+[![Rust](https://github.com/paulo-e/oxygen/actions/workflows/rust.yml/badge.svg)](https://github.com/paulo-e/oxygen/actions/workflows/rust.yml)
 
 ---
 
