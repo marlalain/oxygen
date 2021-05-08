@@ -1,13 +1,13 @@
 # Oxygen
-GNU/Linux-compatible userspace written in C.
+GNU/Linux-compatible userspace written in Rust.
 
 ---
 
-## Installation (Not Usable)
+## Installation (Not Usable Yet)
 
 Do as follows:
 ```
-git clone [link] oxygen
+git clone https://github.com/paulo-e/oxygen oxygen
 cd oxygen
 ./configure
 make

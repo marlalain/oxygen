@@ -1,6 +1,9 @@
-C = gcc
-IN = cat.c
-OUT = cat
+C = rustc
+IN = touch.c
+OUT = touch
+# Following flags can be removed if the target system has the necessary libraries.
+# TODO add options
+FLAGS = "-C target-feature=+crt-static"
 
 all:
-	$(C) $(IN) -o $(OUT)
+	$(C) $(IN) -o $(OUT) $(FLAGS)
