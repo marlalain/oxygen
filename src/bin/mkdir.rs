@@ -10,7 +10,7 @@ fn main() {
         .usage("mkdir folder1 [folders2+]")
         .action(|c| match mkdir(c) {
             Ok(()) => std::process::exit(1),
-            Err(e) => println!("Could not create folder: {}", e),
+            Err(e) => println!("Could not create folder: '{}'", e),
         })
         .flag(
             Flag::new("verbose", FlagType::Bool)
@@ -33,7 +33,7 @@ fn mkdir(c: &Context) -> std::io::Result<()> {
             fs::create_dir(arg)?;
         }
         if c.bool_flag("verbose") {
-            println!("Creating folder {:?}", &arg);
+            println!("Creating folder '{:?}'", &arg);
         }
     }
     Ok(())
