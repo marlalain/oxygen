@@ -11,3 +11,6 @@ git clone https://github.com/paulo-e/oxygen oxygen
 cd oxygen
 cargo build
 ```
+
+# License
+[It's the BSD 3-clause license](https://github.com/paulo-e/oxygen/blob/master/LICENSE)
