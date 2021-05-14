@@ -11,7 +11,7 @@ fn main() {
         .usage("touch file1 [files2+]")
         .action(|c| match touch(c) {
             Ok(()) => std::process::exit(1),
-            Err(e) => println!("Could not create file: '{}'", e),
+            Err(e) => println!("Could not create file: {:?}", e),
         })
         .flag(
             Flag::new("verbose", FlagType::Bool)
@@ -25,7 +25,7 @@ fn touch(c: &Context) -> std::io::Result<()> {
     for arg in &c.args {
         let mut _file = File::create(arg)?;
         if c.bool_flag("verbose") {
-            println!("Created file '{}'.", arg);
+            println!("Created file {:?}", arg);
         }
     }
     Ok(())

@@ -10,7 +10,7 @@ fn main() {
         .usage("cat file1 [files2+]")
         .action(|c| match cat(c) {
             Ok(()) => std::process::exit(1),
-            Err(e) => println!("Could not read file: '{}'", e),
+            Err(e) => println!("Could not read file: {:?}", e),
         })
         .flag(
             Flag::new("verbose", FlagType::Bool)
@@ -24,7 +24,7 @@ fn cat(c: &Context) -> std::io::Result<()> {
     for arg in &c.args {
         let content = fs::read_to_string(arg)?;
         if c.bool_flag("verbose") {
-            println!("Opening file '{:?}'", &arg);
+            println!("Opening file {:?}", &arg);
         }
         print!("{}", content);
     }
