@@ -19,7 +19,8 @@ cargo install --path .
 Optionally, you can test the userspace on a controlled enviroment
 
 ``` sh
-# downloading and building dash git clone git://git.kernel.org/pub/scm/utils/dash/dash.git dash
+# downloading and building dash
+git clone git://git.kernel.org/pub/scm/utils/dash/dash.git dash
 cd dash
 sh autogen.sh
 sh configure.sh --enable-static
