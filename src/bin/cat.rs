@@ -9,7 +9,7 @@ fn main() {
         .version(env!("CARGO_PKG_VERSION"))
         .usage("cat file1 [files2+]")
         .action(|c| match cat(c) {
-            Ok(()) => std::process::exit(1),
+            Ok(()) => std::process::exit(0),
             Err(e) => println!("Could not read file: {:?}", e),
         })
         .flag(

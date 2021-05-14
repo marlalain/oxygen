@@ -9,7 +9,7 @@ fn main() {
         .version(env!("CARGO_PKG_VERSION"))
         .usage("mkdir folder1 [folders2+]")
         .action(|c| match mkdir(c) {
-            Ok(()) => std::process::exit(1),
+            Ok(()) => std::process::exit(0),
             Err(e) => println!("Could not create folder: {:?}", e),
         })
         .flag(
